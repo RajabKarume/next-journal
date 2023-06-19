@@ -6,10 +6,18 @@ export default function Input({user}) {
     const email = user.attributes.email
     function hanndleSubmit(e) {
         e.preventDefault()
+        fetch('https://iykf2wwbu4.execute-api.eu-north-1.amazonaws.com/dev/entries', {
+            method: 'POST',
+            body: JSON.stringify({entry, email})
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
         setEntry("")
     }
     function handleClick() {
-        
+        fetch('https://8kubiwayjf.execute-api.eu-north-1.amazonaws.com/dev/entries')
+        .then(response => response.json())
+        .then(data => console.log(data))
     }
 
     return (
