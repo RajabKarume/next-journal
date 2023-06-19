@@ -1,9 +1,9 @@
 const { DynamoDBClient } = require("@aws-sdk/client-dynamodb");
 const {
   DynamoDBDocumentClient,
-  DeleteCommand,
-  ScanCommand,
   PutCommand,
+  ScanCommand,
+  DeleteCommand,
 } = require("@aws-sdk/lib-dynamodb");
 
 const client = new DynamoDBClient({});
@@ -15,6 +15,9 @@ exports.handler = async (event, context) => {
   let statusCode = 200;
   const headers = {
     "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Content-Type",
+    "Access-Control-Allow-Methods": "GET, POST, DELETE",
   };
 
   try {
@@ -24,11 +27,11 @@ exports.handler = async (event, context) => {
         body = result.Items;
         break;
       case "POST":
-        const requestBody = JSON.parse(event.body);
+        const { id, email, newentry } = JSON.parse(event.body).formdata;
         const item = {
-          id: requestBody.id, // Replace with your desired ID generation logic
-          email: requestBody.email,
-          newentry: requestBody.newentry,
+          id,
+          email,
+          newentry,
         };
 
         await dynamo.send(

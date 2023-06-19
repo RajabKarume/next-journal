@@ -15,7 +15,7 @@
       "function": {
         "journalnextb4f5feea": {
           "deploymentBucketName": "amplify-journalnext-dev-80709-deployment",
-          "s3Key": "amplify-builds/journalnextb4f5feea-7a4a38525a4559386e35-build.zip"
+          "s3Key": "amplify-builds/journalnextb4f5feea-6d452b476278627a3474-build.zip"
         }
       },
       "auth": {
