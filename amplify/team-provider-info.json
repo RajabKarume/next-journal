@@ -13,7 +13,19 @@
     },
     "categories": {
       "function": {
-        "journalnextb4f5feea": {}
+        "journalnextb4f5feea": {
+          "deploymentBucketName": "amplify-journalnext-dev-80709-deployment",
+          "s3Key": "amplify-builds/journalnextb4f5feea-7a4a38525a4559386e35-build.zip"
+        }
+      },
+      "auth": {
+        "journalnext4d009b5c": {}
+      },
+      "storage": {
+        "journaltable": {}
+      },
+      "api": {
+        "journalapi": {}
       }
     }
   }

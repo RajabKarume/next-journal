@@ -15,6 +15,34 @@
       "service": "API Gateway"
     }
   },
+  "auth": {
+    "journalnext4d009b5c": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
   "function": {
     "journalnextb4f5feea": {
       "build": true,
@@ -34,6 +62,24 @@
       ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_journalnextb4f5feea_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "journalnextb4f5feea"
+        }
+      ]
+    },
+    "AMPLIFY_function_journalnextb4f5feea_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "journalnextb4f5feea"
+        }
+      ]
     }
   },
   "storage": {
