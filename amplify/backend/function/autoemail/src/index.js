@@ -26,10 +26,8 @@ exports.handler = async (event, context) => {
       };
     });
     
-    console.log(updatedItems);
     updatedItems.forEach(async updatedItem => {
       const { email, newentry } = updatedItem;
-      console.log(email, newentry);
       await sendEmail(email, newentry);
     });
 
@@ -47,7 +45,9 @@ exports.handler = async (event, context) => {
 };
 
 async function sendEmail(email, newentry) {
+  console.log("Sending email to", email, newentry);
   const params = {
+    Source: "dev.tests.karume@gmail.com", 
     Destination: {
       ToAddresses: [email],
     },
@@ -55,10 +55,9 @@ async function sendEmail(email, newentry) {
       Body: {
         Text: { Data: newentry },
       },
-      Subject: { Data: "New Entry in Your Journal" },
+      Subject: { Data: "New Entry from Journal" },
     },
-    Source: "no-reply@sendjournal.com", 
   };
-
+  console.log(params);
   return ses.sendEmail(params).promise();
 }

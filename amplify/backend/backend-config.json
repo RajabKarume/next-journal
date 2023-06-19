@@ -44,6 +44,25 @@
     }
   },
   "function": {
+    "autoemail": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "journaltable"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "journalnextb4f5feea": {
       "build": true,
       "dependsOn": [
@@ -65,6 +84,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_autoemail_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "autoemail"
+        }
+      ]
+    },
+    "AMPLIFY_function_autoemail_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "autoemail"
+        }
+      ]
+    },
     "AMPLIFY_function_journalnextb4f5feea_deploymentBucketName": {
       "usedBy": [
         {

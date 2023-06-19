@@ -33,7 +33,7 @@ exports.handler = async (event, context) => {
           email,
           newentry,
         };
-
+        
         await dynamo.send(
           new PutCommand({
             TableName: tableName,

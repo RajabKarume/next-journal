@@ -12,6 +12,7 @@
     "@aws-amplify/ui-react": "^5.0.1",
     "autoprefixer": "10.4.14",
     "aws-amplify": "^5.2.7",
+    "aws-sdk": "^2.1399.0",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.6",
     "next": "13.4.6",

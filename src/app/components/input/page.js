@@ -27,6 +27,7 @@ export default function Input({user}) {
           <form onSubmit={hanndleSubmit}  className="flex flex-col justify-center align-middle w-screen h-full col mx-auto  ">
             <textarea maxLength={500} value={newentry} onChange={(e)=>setNewentry(e.target.value)} className="w-3/5 h-1/2 rounded-xl outline-4 bg-slate-200 border-4 text-black mx-auto mt-10 pl-2  " placeholder="Enter your text here"/>
             <button type="submit" className="w-28 hover:bg-slate-900 rounded-xl bg-slate-800 text-white font-bold mx-auto mt-10 ">Submit</button>
+            <button className="w-28 hover:bg-slate-900 rounded-xl bg-slate-800 text-white font-bold mx-auto mt-10 ">Test email</button>
           </form>
       </div>
     )
