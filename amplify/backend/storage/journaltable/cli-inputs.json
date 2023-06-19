@@ -1,0 +1,10 @@
+{
+  "resourceName": "journaltable",
+  "tableName": "journaltable",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

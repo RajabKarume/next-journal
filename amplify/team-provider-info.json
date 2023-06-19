@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-journalnext-dev-80709-authRole",
+      "UnauthRoleArn": "arn:aws:iam::725855067843:role/amplify-journalnext-dev-80709-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::725855067843:role/amplify-journalnext-dev-80709-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-journalnext-dev-80709-deployment",
+      "UnauthRoleName": "amplify-journalnext-dev-80709-unauthRole",
+      "StackName": "amplify-journalnext-dev-80709",
+      "StackId": "arn:aws:cloudformation:eu-north-1:725855067843:stack/amplify-journalnext-dev-80709/275b7050-0e5f-11ee-82ee-06a29d6fa7ac",
+      "AmplifyAppId": "dlm94gp8kjw75"
+    },
+    "categories": {
+      "function": {
+        "journalnextb4f5feea": {}
+      }
+    }
+  }
+}

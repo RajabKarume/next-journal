@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/entries": {
+      "name": "/entries",
+      "lambdaFunction": "journalnextb4f5feea",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
