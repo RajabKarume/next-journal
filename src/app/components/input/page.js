@@ -19,9 +19,6 @@ export default function Input({user}) {
         .then(data => console.log(data))
         setNewentry("")
     }
- 
-      
-
     return (
         <div className=" flex justify-center align-middle w-screen h-96 col  ">
           <form onSubmit={hanndleSubmit}  className="flex flex-col justify-center align-middle w-screen h-full col mx-auto  ">
