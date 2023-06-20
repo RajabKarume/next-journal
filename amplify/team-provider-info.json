@@ -19,7 +19,7 @@
         },
         "autoemail": {
           "deploymentBucketName": "amplify-journalnext-dev-80709-deployment",
-          "s3Key": "amplify-builds/autoemail-6c56315a696651477750-build.zip"
+          "s3Key": "amplify-builds/autoemail-7855426a6c706e584744-build.zip"
         }
       },
       "auth": {

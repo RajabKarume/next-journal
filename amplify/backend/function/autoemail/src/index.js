@@ -2,6 +2,7 @@ const { DynamoDBClient } = require("@aws-sdk/client-dynamodb");
 const {
   DynamoDBDocumentClient,
   ScanCommand,
+  DeleteCommand,
 } = require("@aws-sdk/lib-dynamodb");
 const AWS = require("aws-sdk");
 const ses = new AWS.SES();
@@ -29,8 +30,18 @@ exports.handler = async (event, context) => {
     updatedItems.forEach(async updatedItem => {
       const { email, newentry } = updatedItem;
       await sendEmail(email, newentry);
+      await dynamo.send(
+        new DeleteCommand({
+          TableName: tableName,
+          Key: {
+            id: updatedItem.id,
+          },
+        })
+      );
     });
 
+
+    
     return {
       statusCode: 200,
       body: "Emails sent successfully",
