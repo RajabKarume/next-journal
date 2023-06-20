@@ -2,7 +2,7 @@
 
 import "@aws-amplify/ui-react/styles.css";
 import { Amplify } from "aws-amplify";
-import awsmobile from "@/aws-exports";
+import awsmobile from "../src/aws-exports";
 import "./globals.css";
 
 Amplify.configure({ ...awsmobile, ssr: true });
