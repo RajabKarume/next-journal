@@ -15,11 +15,11 @@
       "function": {
         "journalnextb4f5feea": {
           "deploymentBucketName": "amplify-journalnext-dev-80709-deployment",
-          "s3Key": "amplify-builds/journalnextb4f5feea-356c68726b48586e7256-build.zip"
+          "s3Key": "amplify-builds/journalnextb4f5feea-7a57693031306c35566a-build.zip"
         },
         "autoemail": {
           "deploymentBucketName": "amplify-journalnext-dev-80709-deployment",
-          "s3Key": "amplify-builds/autoemail-7855426a6c706e584744-build.zip"
+          "s3Key": "amplify-builds/autoemail-79417349615570477a49-build.zip"
         }
       },
       "auth": {

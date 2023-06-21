@@ -27,25 +27,28 @@ exports.handler = async (event, context) => {
       };
     });
     
-    updatedItems.forEach(async updatedItem => {
-      const { email, newentry } = updatedItem;
-      await sendEmail(email, newentry);
-      await dynamo.send(
-        new DeleteCommand({
-          TableName: tableName,
-          Key: {
-            id: updatedItem.id,
-          },
-        })
-      );
-    });
-
-
-    
-    return {
-      statusCode: 200,
-      body: "Emails sent successfully",
-    };
+    try{
+      updatedItems.forEach(async updatedItem => {
+        const { email, newentry } = updatedItem;
+        await sendEmail(email, newentry);
+        await dynamo.send(
+          new DeleteCommand({
+            TableName: tableName,
+            Key: {
+              id: updatedItem.id,
+            },
+          })
+        );
+        console.log("Deleted item", updatedItem);
+        
+      });
+      return {
+        statusCode: 200,
+        body: "Emails sent successfully",
+      };
+      } catch (err) {
+        console.error(err);
+      }
   } catch (err) {
     console.error(err);
     return {
@@ -69,6 +72,5 @@ async function sendEmail(email, newentry) {
       Subject: { Data: "New Entry from Journal" },
     },
   };
-  console.log(params);
   return ses.sendEmail(params).promise();
 }
